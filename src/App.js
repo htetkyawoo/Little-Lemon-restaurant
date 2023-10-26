@@ -1,18 +1,21 @@
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import HomePage from "./components/HomePage";
 import BookingPage from "./components/BookingPage";
 import { useState } from "react";
+import Footer from "./components/Footer";
 
 
 function App() {
   const [availableTime, setAvailableTime] = useState({
     date : '',
     time : '',
-    guest : '',
+    guest : 0,
     occasion : ''
   });
+
+
   return (
     <BrowserRouter>
       <Nav/>
@@ -22,6 +25,8 @@ function App() {
           <Route path="/booking" element={<BookingPage availableTime={availableTime} setAvailableTime={setAvailableTime}/>}></Route>
         </Routes>
       </main>
+      <hr/>
+      <Footer/>
     </BrowserRouter>
   );
 }

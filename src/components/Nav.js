@@ -1,32 +1,59 @@
 import React from "react";
-import logo2 from "../asset/logo_2.jpg";
+import logo from '../asset/Logo.svg'
 import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <>
-      <nav className="container">
-        <img src={logo2} alt="logo" height={48} />
-        <ul>
-          <li>
-            <NavLink to={'/'}>Home</NavLink>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-          <li>
-            <a href="/menu">Menu</a>
-          </li>
-          <li>
-            <NavLink to={"/booking"}>Reservations</NavLink>
-          </li>
-          <li>
-            <a href="/order_online">Order Online</a>
-          </li>
-          <li>
-            <a href="/login">login</a>
-          </li>
-        </ul>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container">
+          <img className="navbar-brand" src={logo} alt="logo" height={48}/>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="nav ms-auto">
+              <li className="nav-item">
+                <NavLink className="nav-link" to={"/"}>
+                  Home
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="#about">
+                  About Us
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="#menu">
+                  Menu
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/booking">
+                  Reservations
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="#order_online">
+                  Order Online
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/">
+                  login
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </>
   );

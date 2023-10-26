@@ -1,25 +1,29 @@
 import React from "react";
-import heroSection from "../asset/heroSection.jpg";
+import heroSection from "../asset/restauranfood.jpg";
 const CallToAction = () => {
   return (
-    <section id="hero">
-      <div id="heroText" className="container">
-        <h1 style={{fontSize: '4rem', fontWeight: 'normal', marginBlock : '1rem'}}>Little Lemon</h1>
-        <h3 style={{fontSize: '2.5rem', fontWeight: 'normal', marginBlock : '1rem'}}>Chicago</h3>
-        <p style={{fontSize: '1.5rem', marginBlock : '1rem'}}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ratione
-          quis officia nesciunt optio voluptates sunt, hic dolore sint quos!
-          Nesciunt expedita a fugiat. Molestiae blanditiis eveniet laborum
-          aperiam inventore.
-        </p>
-        <button>Reserve a Table</button>
+    <section id="menu" className="container-fluid bg-primary">
+      <div className="container d-flex justify-content-between position-relative p-4">
+        <div className="markazi">
+          <h1 className="text-warning fs-1">Little Lemon</h1>
+          <h2 className="text-white fs-2">Chicago</h2>
+          <p className="text-white fs-4 w-50">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <button className="btn btn-warning">Reserve a Table</button>
+        </div>
         <img
-          className="img"
+          className="rounded-4 position-absolute d-none d-md-inline"
+          style={{
+            top : '25%',
+            left : '70%'
+          }}
           id="heroImg"
           src={heroSection}
           alt="heroSection"
-          width={200}
-          height={280}
+          height={300}
+          width={300}
         />
       </div>
     </section>
